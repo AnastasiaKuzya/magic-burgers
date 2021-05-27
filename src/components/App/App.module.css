@@ -1,0 +1,42 @@
+.host {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.title {
+  text-align: left;
+}
+
+.content {
+  display: flex;
+  margin-right: -40px;
+}
+
+@media screen and (max-width: 1280px) {
+  .content {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.contentItem {
+  width: calc(100% / 2);
+  margin-right: 40px;
+}
+
+@media screen and (max-width: 1280px) {
+  .contentItem {
+    width: 100%;
+    max-width: 600px;
+  }
+}
