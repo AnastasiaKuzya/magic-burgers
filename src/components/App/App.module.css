@@ -21,7 +21,7 @@
   margin-right: -40px;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 600px) {
   .content {
     flex-wrap: wrap;
     justify-content: center;
@@ -30,13 +30,24 @@
 }
 
 .contentItem {
-  width: calc(100% / 2);
+  width: calc(100% / 2 - 40px);
   margin-right: 40px;
+  box-sizing: border-box;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 600px) {
   .contentItem {
     width: 100%;
     max-width: 600px;
+  }
+}
+
+.contentItem div {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+  .contentItem div {
+    box-sizing: border-box;
   }
 }
