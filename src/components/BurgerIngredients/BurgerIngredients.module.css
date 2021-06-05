@@ -1,7 +1,0 @@
-@media screen and (min-width: 600px) {
-  .content {
-    max-height: 600px;
-    overflow-y: overlay;
-    overflow-x: hidden;
-  }
-}

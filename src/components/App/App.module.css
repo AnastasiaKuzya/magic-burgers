@@ -1,6 +1,8 @@
 .host {
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 0;
 }
 
 .container {
@@ -42,9 +44,9 @@
   }
 }
 
-.contentItem div {
-  overflow: hidden;
-}
+/*.contentItem div {*/
+/*  overflow: hidden;*/
+/*}*/
 
 @media screen and (max-width: 1200px) {
   .contentItem div {

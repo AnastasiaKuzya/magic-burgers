@@ -1,18 +1,18 @@
-import React from 'react';
+import * as React from 'react';
 
 import Tabs, { TTab } from '../../ui/Tabs/Tabs';
-import Ingredients, { TIngredients } from '../Ingredients/Ingredients';
-
-import styles from './BurgerIngredients.module.css';
+import Ingredients, { TIngredients } from './../Ingredients/Ingredients';
+import ScrollContainer from './../ScrollContainer/ScrollContainer';
 
 type TBurgerIngredientsProps = {
   ingredients: TIngredients;
   className?: string;
+  onClick(id: string): void;
 };
 
 type TTabFull = TTab & { list: TIngredients };
 
-const BurgerIngredients = ({ className, ingredients }: TBurgerIngredientsProps) => {
+const BurgerIngredients = ({ className, ingredients, onClick }: TBurgerIngredientsProps) => {
   const tabs: TTabFull[] = [
     { id: 1, title: 'Булки', list: ingredients.filter((i) => i.type === 'bun') },
     { id: 2, title: 'Соусы', list: ingredients.filter((i) => i.type === 'sauce') },
@@ -28,14 +28,15 @@ const BurgerIngredients = ({ className, ingredients }: TBurgerIngredientsProps) 
     }
   };
   return (
-    <section className={`${styles.host} ${className}`}>
-      <Tabs className="mb-10" current={current.title} onClick={handleClick} tabs={tabs} />
+    <section className={className}>
+      <Tabs className='mb-10' current={current.title} onClick={handleClick} tabs={tabs} />
 
-      <div className={styles.content}>
+      <ScrollContainer>
         {tabs.map((i) => (
-          <Ingredients key={`ingredients-${i.id}`} className="mb-10" ingredients={i.list} title={i.title} />
+          <Ingredients key={`ingredients-${i.id}`} className='mb-10' ingredients={i.list} title={i.title}
+                       onClick={onClick} />
         ))}
-      </div>
+      </ScrollContainer>
     </section>
   );
 };
