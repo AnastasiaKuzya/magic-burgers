@@ -34,8 +34,8 @@ const BurgerConstructor = ({ className, ingredients, onClick }: TBurgerConstruct
 
   return (
     <section className={classNames(styles.host, className)}>
-      <ul className={`mb-10 pl-10`} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-        {bun && <li className={`${styles.item} pl-8`}>
+      <div className={`mb-10 pl-4`} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        {bun && <div className={`${styles.item} pl-8 pr-2`}>
           <ConstructorElement
             type='top'
             isLocked={true}
@@ -43,11 +43,11 @@ const BurgerConstructor = ({ className, ingredients, onClick }: TBurgerConstruct
             price={bun.price}
             thumbnail={bun.image_mobile}
           />
-        </li>}
-        <ScrollContainer>
+        </div>}
+        <ScrollContainer style={{ maxHeight: 464 }}>
           <ul className={styles.list} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {ingredients.filter(i => i.type !== 'bun').map((i, index) => (
-              <li key={`constructor-${index}`} className={`${styles.item} pl-8`}>
+              <li key={i._id} className={`${styles.item} pl-8 pr-2`}>
               <span className={styles.icon}>
                 <DragIcon type='primary' />
               </span>
@@ -62,7 +62,7 @@ const BurgerConstructor = ({ className, ingredients, onClick }: TBurgerConstruct
             ))}
           </ul>
         </ScrollContainer>
-        {bun && <li className={`${styles.item} pl-8`}>
+        {bun && <div className={`${styles.item} pl-8`}>
           <ConstructorElement
             type='bottom'
             isLocked={true}
@@ -70,8 +70,8 @@ const BurgerConstructor = ({ className, ingredients, onClick }: TBurgerConstruct
             price={bun.price}
             thumbnail={bun.image_mobile}
           />
-        </li>}
-      </ul>
+        </div>}
+      </div>
       <div className={`${styles.footer} mt-10 pr-10`}>
         <Price className='mr-10' price={price} size='medium' />
         <Button type='primary' size='large' onClick={onClick}>

@@ -12,7 +12,7 @@ type TPriceProps = {
 };
 
 const Price = ({ price, size = 'small', className }: TPriceProps) => (
-  <span
+  <h3
     className={classNames(
       styles.host,
       className,
@@ -23,7 +23,7 @@ const Price = ({ price, size = 'small', className }: TPriceProps) => (
     )}>
     <span className="mr-2">{price}</span>
     <CurrencyIcon type="primary" />
-  </span>
+  </h3>
 );
 
 export default Price;

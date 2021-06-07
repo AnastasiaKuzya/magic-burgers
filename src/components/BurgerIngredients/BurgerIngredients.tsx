@@ -3,11 +3,12 @@ import * as React from 'react';
 import Tabs, { TTab } from '../../ui/Tabs/Tabs';
 import Ingredients, { TIngredients } from './../Ingredients/Ingredients';
 import ScrollContainer from './../ScrollContainer/ScrollContainer';
+import type { TIngredient } from './../Ingredient/Ingredient';
 
 type TBurgerIngredientsProps = {
   ingredients: TIngredients;
   className?: string;
-  onClick(id: string): void;
+  onClick(ingredient: TIngredient): void;
 };
 
 type TTabFull = TTab & { list: TIngredients };
@@ -31,7 +32,7 @@ const BurgerIngredients = ({ className, ingredients, onClick }: TBurgerIngredien
     <section className={className}>
       <Tabs className='mb-10' current={current.title} onClick={handleClick} tabs={tabs} />
 
-      <ScrollContainer>
+      <ScrollContainer style={{ maxHeight: 664 }}>
         {tabs.map((i) => (
           <Ingredients key={`ingredients-${i.id}`} className='mb-10' ingredients={i.list} title={i.title}
                        onClick={onClick} />

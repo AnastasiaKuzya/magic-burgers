@@ -1,6 +1,5 @@
 @media screen and (min-width: 600px) {
   .host {
-    max-height: 600px;
     overflow-y: scroll;
     overflow-x: hidden;
   }

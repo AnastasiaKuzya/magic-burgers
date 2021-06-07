@@ -3,12 +3,9 @@ import classNames from 'classnames';
 
 import styles from './ScrollContainer.module.css';
 
-type TModalProps = {
-  children: React.ReactNode;
-  className?: string;
-};
+type TModalProps = React.HTMLAttributes<HTMLDivElement>;
 
-const ScrollContainer = ({ className, children }: TModalProps) => <div
-  className={classNames(styles.host, className)}>{children}</div>;
+const ScrollContainer = ({ className, children, ...otherProps }: TModalProps) => <div
+  className={classNames(styles.host, className)} {...otherProps}>{children}</div>;
 
 export default ScrollContainer;

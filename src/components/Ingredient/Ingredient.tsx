@@ -27,16 +27,14 @@ export type TIngredient = {
 type TIngredientProps = {
   ingredient: TIngredient;
   className?: string;
-  onClick(id: string): void;
+  onClick(ingredient: TIngredient): void;
 };
 
 const Ingredient = ({ ingredient, className, onClick }: TIngredientProps) => {
   const [count] = React.useState<number>(0);
 
-  const handleClick = React.useCallback(() => onClick(ingredient._id), [ingredient, onClick]);
-
   return (
-    <li className={classNames(styles.host, className, 'pr-4 pl-4')} onClick={handleClick}>
+    <li className={classNames(styles.host, className, 'pr-4 pl-4')} onClick={() => onClick(ingredient)}>
       {count > 0 && <Counter count={count} size='default' />}
       <img className='mb-2' src={ingredient.image} alt={ingredient.name} />
       <Price className='mb-2' price={ingredient.price} />

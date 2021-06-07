@@ -53,3 +53,7 @@
     box-sizing: border-box;
   }
 }
+
+.orderModal {
+  padding-bottom: 80px;
+}
