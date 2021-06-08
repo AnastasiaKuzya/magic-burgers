@@ -1,13 +1,13 @@
 .list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  margin: 0;
-  box-sizing: border-box;
-  margin-right: -24px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: -24px;
 }
 
 .item {
-  width: calc(100% / 2 - 24px);
-  max-width: 300px;
+    width: calc(100% / 2 - 24px);
+    max-width: 300px;
 }

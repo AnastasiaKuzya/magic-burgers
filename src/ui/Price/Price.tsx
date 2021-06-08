@@ -6,24 +6,24 @@ import { CurrencyIcon } from '@ya.praktikum/react-developer-burger-ui-components
 import styles from './Price.module.css';
 
 type TPriceProps = {
-  price: number;
-  size?: 'small' | 'medium' | 'large';
-  className?: string;
+    price: number;
+    size?: 'small' | 'medium' | 'large';
+    className?: string;
 };
 
 const Price = ({ price, size = 'small', className }: TPriceProps) => (
-  <h3
-    className={classNames(
-      styles.host,
-      className,
-      'text',
-      size === 'small' && 'text_type_digits-default',
-      size === 'medium' && 'text_type_digits-medium',
-      size === 'large' && 'text_type_digits-large',
-    )}>
-    <span className="mr-2">{price}</span>
-    <CurrencyIcon type="primary" />
-  </h3>
+    <h3
+        className={classNames(
+            styles.host,
+            className,
+            'text',
+            size === 'small' && 'text_type_digits-default',
+            size === 'medium' && 'text_type_digits-medium',
+            size === 'large' && 'text_type_digits-large',
+        )}>
+        <span className='mr-2'>{price}</span>
+        <CurrencyIcon type='primary' />
+    </h3>
 );
 
 export default Price;

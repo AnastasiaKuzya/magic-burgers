@@ -1,18 +1,18 @@
 @media screen and (min-width: 600px) {
-  .host {
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
+    .host {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
 }
 
 .host::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
 }
 
 .host::-webkit-scrollbar-track {
-  background: var(--background-element);
+    background: var(--background-element);
 }
 
 .host::-webkit-scrollbar-thumb {
-  background-color: var(--text-inactive-color);
+    background-color: var(--text-inactive-color);
 }

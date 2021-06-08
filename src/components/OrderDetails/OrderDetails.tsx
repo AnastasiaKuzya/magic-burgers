@@ -5,11 +5,11 @@ import done from './../../images/done.png';
 
 import styles from './OrderDetails.module.css';
 
-type TModalProps = React.HTMLAttributes<HTMLDivElement>;
+type TModalProps = { data: string } & React.HTMLAttributes<HTMLDivElement>;
 
-const OrderDetails = ({ className }: TModalProps) => (
+const OrderDetails = ({ className, data }: TModalProps) => (
   <div className={classNames(styles.host, className)}>
-    <h2 className={`${styles.title} text text_type_digits-large mb-8`}>034536</h2>
+    <h2 className={`${styles.title} text text_type_digits-large mb-8`}>{data}</h2>
     <p className={`${styles.desc} text text_type_main-medium`}>
       идентификатор заказа
     </p>
