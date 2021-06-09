@@ -1,0 +1,19 @@
+.host {
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    text-align: center;
+    padding: 0 54px;
+    box-sizing: border-box;
+}
+
+.item {
+    width: calc(100% / 4);
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+}

@@ -1,48 +1,48 @@
 .host {
-  background-color: var(--background);
-  box-sizing: border-box;
+    background-color: var(--background);
+    box-sizing: border-box;
 }
 
 .container {
-  max-width: 1280px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 @media screen and (max-width: 1280px) {
-  .container {
-    flex-wrap: wrap;
-  }
+    .container {
+        flex-wrap: wrap;
+    }
 }
 
 .item {
-  display: flex;
-  justify-content: center;
-  width: calc(100% / 3);
-  max-width: calc(100% / 3);
+    display: flex;
+    justify-content: center;
+    width: calc(100% / 3);
+    max-width: calc(100% / 3);
 }
 
 @media screen and (max-width: 1280px) {
-  .item {
-    width: auto;
-  }
+    .item {
+        width: auto;
+    }
 }
 
 .itemRight {
-  justify-content: flex-end;
+    justify-content: flex-end;
 }
 
 .itemLeft {
-  justify-content: flex-start;
+    justify-content: flex-start;
 }
 
 .link {
-  color: currentColor;
-  display: flex;
-  text-decoration: none;
-  cursor: pointer;
+    color: currentColor;
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
 }

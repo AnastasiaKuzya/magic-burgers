@@ -1,31 +1,24 @@
 .list {
-  box-sizing: border-box;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-@media screen and (min-width: 600px) {
-  .list {
-    max-height: 600px;
-    overflow-y: overlay;
-  }
+    box-sizing: border-box;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .icon {
-  top: 50%;
-  left: 0;
-  transform: translate(0, -50%);
-  position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    position: absolute;
 }
 
 .footer {
-  display: flex;
-  justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
