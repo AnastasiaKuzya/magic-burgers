@@ -34,7 +34,7 @@ const IngredientDetails = ({ className, ingredient }: TModalProps) => {
 
     return (
         <div className={classNames(styles.host, className)}>
-            <img className={`${styles.img} mb-4`} src={ingredient.image_large} alt='done' />
+            <img className={`${styles.img} mb-4`} src={ingredient.image_large} alt={ingredient.name} />
             <h2 className={`${styles.desc} text text_type_main-medium mb-7`}>
                 {ingredient.name}
             </h2>

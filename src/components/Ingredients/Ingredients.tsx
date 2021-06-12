@@ -20,7 +20,7 @@ const Ingredients = ({ className, ingredients, title, onClick }: TIngredientsPro
             <ul className={`${styles.list} pr-4 pl-4`}>
                 {ingredients.map((ingredient) => (
                     <Ingredient
-                        key={`ingredient-${ingredient._id}`}
+                        key={ingredient._id}
                         className={`${styles.item} mb-6 mr-6`}
                         ingredient={ingredient}
                         onClick={onClick}
