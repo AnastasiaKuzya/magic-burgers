@@ -9,8 +9,10 @@ import classNames from 'classnames';
 
 type TIngredientType = 'bun' | 'main' | 'sauce' | string;
 
+export type TIngredientId = string;
+
 export type TIngredient = {
-    _id: string;
+    _id: TIngredientId;
     name: string;
     type: TIngredientType;
     fat: number;
